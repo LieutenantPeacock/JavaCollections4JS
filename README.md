@@ -61,3 +61,45 @@ const myMap2 = new HashMap(myMap); // create HashMap from other HashMap
 		<td><code>equals(obj)</code></td><td>Returns <code>true</code> if the value of <code>obj</code> is equal to the value of this instance.</td>
 	</tr>
 </table>
+
+## HashSet
+
+[HashSet.js](src/HashSet.js) implements an unordered collection with unique elements. Similar to <code>HashMap</code>, each element (except primitives) stored in a <code>HashSet</code> must implement a <code>hashCode</code> and <code>equals</code> method. To use <code>HashSet</code>, <code>HashMap</code> must be included first. <br>
+Note that <code>HashSet</code> instances are iterable, so <code>[...myHashSet]</code> will return an array containing the elements in the <code>HashSet</code>.
+
+### Constructor
+The constructor accepts an optional iterable object, all elements of which will be initially added to the <code>HashSet</code>. If the first parameter is not provided, it constructs an empty <code>HashSet</code>.
+
+```
+const mySet = new HashSet(); // creates empty HashSet
+const mySet2 = new HashSet([1, 2, 3]); // creates a HashSet containing the elements of the array
+```
+
+### Instance methods
+
+<table>
+	<tr><th>Method Signature</th><th>Description</th></tr>
+	<tr><td><code>add(obj)</code></td><td>Adds <code>obj</code> to the <code>HashSet</code>, if it is not already present. Returns <code>true</code> if the object was added, i.e. it was not already present.</td></tr>
+	<tr>
+		<td><code>contains(obj)</code></td>
+		<td>Returns <code>true</code> if the <code>HashSet</code> contains <code>obj</code>.</td>
+	</tr>
+	<tr>
+		<td><code>remove(obj)</code></td><td>Removes <code>obj</code> from the <code>HashSet</code>.</td>
+	</tr>
+	<tr>
+		<td><code>clear()</code></td><td>Removes all elements from the <code>HashSet</code>.</td>
+	</tr>
+	<tr>
+		<td><code>size()</code></td><td>Returns the number of elements in the <code>HashSet</code>.</td>
+	</tr>
+	<tr>
+		<td><code>isEmpty()</code></td><td>Returns <code>true</code> if there are no elements in the <code>HashSet</code></td>
+	</tr>
+	<tr>
+		<td><code>hashCode()</code></td><td>Returns an integer hash code for this instance.</td>
+	</tr>
+	<tr>
+		<td><code>equals(obj)</code></td><td>Returns <code>true</code> if the value of <code>obj</code> is equal to the value of this instance.</td>
+	</tr>
+</table>
