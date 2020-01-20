@@ -168,3 +168,55 @@ const myList2 = new ArrayList([1, 2, 3]); // creates an ArrayList containing the
 		<td><code>equals(obj)</code></td><td>Returns <code>true</code> if the value of <code>obj</code> is equal to the value of this instance.</td>
 	</tr>
 </table>
+
+## Equals and HashCode for Objects You Cannot Modify
+
+[HashedObject.js](src/HashedObject.js) provides a wrapper for an object that allows specifying an <code>equals</code> and <code>hashCode</code> function. This wrapped object can then be used as a key in a <code>HashMap</code> or stored 
+in a <code>HashSet</code>.<br>
+
+### Constructor
+The constructor takes the object to wrap, the hash function, and the equals function as arguments. <br>
+The <code>equals</code> function must take two objects as parameters and return a boolean indicating whether they are equal. If not equals function is specified, the default is strict equality comparison.<br>
+The <code>hashCode</code> function must take one object as input and return its hash code.
+
+```
+let wrapped = new HashedObject(myObj, hashFn, equalsFn);
+```
+
+### Instance Methods
+
+<table>
+	<tr><th>Method Signature</th><th>Description</th></tr>
+	<tr>
+		<td><code>hashCode()</code></td><td>Returns the hash code of the wrapped object obtained with the hashCode function passed in through the constructor.</td>
+	</tr>
+	<tr>
+		<td><code>equals(obj)</code></td><td>Returns the result of calling the equals function provided in the constructor, passing the underlying object and <code>obj</code> as arguments.</td>
+	</tr>
+	<tr>
+		<td><code>getValue()</code></td><td>Returns the underlying object that was wrapped.</td>
+	</tr>
+</table>
+
+### Static Methods and Properties
+
+There are some static methods and properties provided for convenience that implement common equals or hash code functions.
+
+<table>
+	<tr><th>Name</th><th>Description</th></tr>
+	<tr>
+		<td><code>DEFAULT_EQUALS</code></td><td>A function implementing an equals function using strict equality.</td>
+	</tr>
+	<tr>
+		<td><code>ITERABLE_HASHCODE</code></td><td>A function implementing a hash code function for an iterable object.</td>
+	</tr>
+	<tr>
+		<td><code>STRING_HASHCODE</code></td><td>A function implementing a hash code function for a string.</td>
+	</tr>
+	<tr>
+		<td><code>ITERABLE_EQUALS</code></td><td>A function implementing an equals function for iterable objects by comparing elements at corresponding indexes.</td>
+	</tr>
+	<tr>
+		<td><code>factory(hashCodeFn, equalsFn)</code></td><td>Returns a factory function from the given hash code and equals functions. The factory function accepts a single object parameter and returns a <code>HashedObject</code> from the parameter and the hash code and equals functions (provided when creating the factory).</td>
+	</tr>
+</table>
