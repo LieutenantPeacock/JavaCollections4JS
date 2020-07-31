@@ -103,3 +103,68 @@ const mySet2 = new HashSet([1, 2, 3]); // creates a HashSet containing the eleme
 		<td><code>equals(obj)</code></td><td>Returns <code>true</code> if the value of <code>obj</code> is equal to the value of this instance.</td>
 	</tr>
 </table>
+
+## ArrayList
+
+[ArrayList.js](src/ArrayList.js) implements an dynamically-sized list with a <code>hashCode</code> and <code>equals</code> method. <br>
+Note that <code>ArrayList</code> instances are iterable, so <code>[...myArrayList]</code> will return an array containing the elements in the <code>ArrayList</code> (in order).
+
+### Constructor
+The constructor accepts an optional iterable object to use to fill the list initially. If not specified, an empty <code>ArrayList</code> is constructed.
+
+```
+const myList = new ArrayList(); // creates an empty ArrayList
+const myList2 = new ArrayList([1, 2, 3]); // creates an ArrayList containing the numbers 1, 2, 3
+```
+
+### Instance Methods
+<table>
+	<tr>
+		<th>Method Signature</th><th>Description</th>
+	</tr>
+	<tr>
+		<td><code>add(...elems)</code></td><td>Adds all of the arguments passed in to the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>addAll(obj)</code></td><td>Adds all the elements of the iterable <code>obj</code> to the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>removeAtIndex(idx)</code></td><td>Removes the element at the specified index.</td>
+	</tr>
+	<tr>
+		<td><code>get(idx)</code></td><td>Returns the element at the specified index.</td>
+	</tr>
+	<tr>
+		<td><code>addAtIndex(idx, ...elems)</code></td>
+		<td>Adds the given elements to the <code>ArrayList</code> starting at the specified index.</td>
+	</tr>
+	<tr>
+		<td><code>set(idx, elem)</code></td><td>Sets the element at the specified index to be <code>elem</code>.</td>
+	</tr>
+	<tr>
+		<td><code>removeIf(predicate)</code></td>
+		<td>Removes all elements in the <code>ArrayList</code> that match a predicate (that accepts an element as the only parameter and returns <code>true</code> if it should be removed).</td>
+	</tr>
+	<tr>
+		<td><code>remove(obj)</code></td>
+		<td>Removes the first occurrence of <code>obj</code> from the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>indexOf(obj)</code></td>
+		<td>Returns the first index at which <code>obj</code> is found in the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>size()</code></td>
+		<td>Returns the number of elements in the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>isEmpty()</code></td>
+		<td>Returns <code>true</code> if there are no elements in the <code>ArrayList</code>.</td>
+	</tr>
+	<tr>
+		<td><code>hashCode()</code></td><td>Returns an integer hash code for this instance.</td>
+	</tr>
+	<tr>
+		<td><code>equals(obj)</code></td><td>Returns <code>true</code> if the value of <code>obj</code> is equal to the value of this instance.</td>
+	</tr>
+</table>
