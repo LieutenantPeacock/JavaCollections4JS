@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HashMap Example</title>
+</head>
+<body>
+Open the browser console to see the results.
+<script src="../src/hashmap.js"></script>
+<script>
+class Point{
+	constructor(x, y){
+		this.x = x;
+		this.y = y;
+	}
+	hashCode(){
+		const prime = 31;
+        let result = 1;
+        result = prime * result + this.x;
+        result = prime * result + this.y;
+        return result;
+	}
+	equals(obj){
+		return obj instanceof Point && obj.x === this.x && obj.y === this.y;
+	}
+}
+const hm = new HashMap();
+console.log('hm.put(new Point(1,2), "abc") ->', hm.put(new Point(1,2), "abc"));
+console.log('hm.containsKey(new Point(1,2)) ->', hm.containsKey(new Point(1,2)));
+console.log('hm.get(new Point(1,2)) ->', hm.get(new Point(1,2)));
+console.log('hm.put(new Point(1,2), "abcd") ->', hm.put(new Point(1,2), "abcd"));
+console.log('hm.get(new Point(1,2)) ->', hm.get(new Point(1,2)));
+</script>
+</body>
+</html>
