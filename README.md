@@ -6,7 +6,8 @@ This repository contains implementations of some commonly-used Java collections 
 
 [HashMap.js](src/HashMap.js) implements a [Hash Table/Map](https://en.wikipedia.org/wiki/Hash_table) with similar methods to [Java's HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html). 
 All objects (except primitives) used as keys must implement a <code>hashCode</code> method to return an integer hash code as well as an <code>equals</code> method that accepts another object as a parameter and returns whether or not the value of the current object is equal to parameter. Objects that are considered equal must have the same hash code, but the converse is not true. <br>
-Note that <code>HashMap</code> instances are iterable, so <code>[...myHashMap]</code> will return an array of arrays, where each inner array consists of the key and value for a mapping (in that order).
+Note that <code>HashMap</code> instances are iterable, so <code>[...myHashMap]</code> will return an array of arrays, where each inner array consists of the key and value for a mapping (in that order). <br>
+An example of usage can be found [here](examples/HashMapExample.html).
 
 ### Constructor
 
