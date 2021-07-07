@@ -15,10 +15,10 @@ class Point{
 	}
 	hashCode(){
 		const prime = 31;
-        let result = 1;
-        result = prime * result + this.x;
-        result = prime * result + this.y;
-        return result;
+		let result = 1;
+		result = prime * result + this.x;
+		result = prime * result + this.y;
+		return result;
 	}
 	equals(obj){
 		return obj instanceof Point && obj.x === this.x && obj.y === this.y;
