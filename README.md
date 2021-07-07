@@ -3,8 +3,9 @@
 This repository contains implementations of some commonly-used Java collections in JavaScript.
 
 ## HashMap
-
-[HashMap.js](src/HashMap.js) implements a [Hash Table/Map](https://en.wikipedia.org/wiki/Hash_table) with similar methods to [Java's HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html). 
+Although JavaScript has a native <code>Map</code> object, key equality is determined by the <code>sameValueZero</code> algorithm, so objects with the exact same properties are not considered equal unless they are the same reference (<code>{a: 1, b: 2} !== {a: 1, b: 2}</code>). This cannot be customized. <br>
+[HashMap.js](src/HashMap.js) provides fine-grained control over what objects are considered equal, so both primitives and user-defined objects may be used as keys.
+It implements a [Hash Table/Map](https://en.wikipedia.org/wiki/Hash_table) with similar methods to [Java's HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html). 
 All objects (except primitives) used as keys must implement a <code>hashCode</code> method to return an integer hash code as well as an <code>equals</code> method that accepts another object as a parameter and returns whether or not the value of the current object is equal to parameter. Objects that are considered equal must have the same hash code, but the converse is not true. <br>
 Note that <code>HashMap</code> instances are iterable, so <code>[...myHashMap]</code> will return an array of arrays, where each inner array consists of the key and value for a mapping (in that order). <br>
 An example of usage can be found [here](examples/HashMapExample.html).
@@ -71,8 +72,9 @@ const myMap2 = new HashMap(myMap); // create HashMap from other HashMap
 </table>
 
 ## HashSet
-
-[HashSet.js](src/HashSet.js) implements an unordered collection with unique elements. Similar to <code>HashMap</code>, each element (except primitives) stored in a <code>HashSet</code> must implement a <code>hashCode</code> and <code>equals</code> method. To use <code>HashSet</code>, <code>HashMap</code> must be included first. <br>
+Although JavaScript has a native <code>Set</code> object, elements are considered equal only if they are primitives with the same value or the same reference of an object. Thus, objects with the same properties and values can be duplicated many times. <br>
+[HashSet.js](src/HashSet.js) provides fine-grained control over what objects are considered equal, so both primitives and user-defined objects may be inserted with uniqueness guaranteed.
+It implements an unordered collection with unique elements. Similar to <code>HashMap</code>, each element (except primitives) stored in a <code>HashSet</code> must implement a <code>hashCode</code> and <code>equals</code> method. To use <code>HashSet</code>, <code>HashMap</code> must be included first. <br>
 Note that <code>HashSet</code> instances are iterable, so <code>[...myHashSet]</code> will return an array containing the elements in the <code>HashSet</code>.
 
 ### Usage
