@@ -9,6 +9,13 @@ All objects (except primitives) used as keys must implement a <code>hashCode</co
 Note that <code>HashMap</code> instances are iterable, so <code>[...myHashMap]</code> will return an array of arrays, where each inner array consists of the key and value for a mapping (in that order). <br>
 An example of usage can be found [here](examples/HashMapExample.html).
 
+### Usage
+Include the script before code that uses <code>HashMap</code>. The script can be loaded via CDN or a local downloaded copy.
+
+```
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashMap.js" integrity="sha384-AD+fe06BloScT8iK5vgKw2FW3imLYjVLP6P9OS+zKpI8vIaNrBTKnQ4TCa4poj2F" crossorigin="anonymous"></script>
+```
+
 ### Constructor
 
 The constructor accepts an optional <code>HashMap</code>, which will copy the contents. Alternately, it will create an empty <code>HashMap</code>.
@@ -41,7 +48,7 @@ const myMap2 = new HashMap(myMap); // create HashMap from other HashMap
 		<td><code>containsValue(value)</code></td><td>Returns <code>true</code> if there is at least one key mapped to the given <code>value</code>.</td>
 	</tr>
 	<tr>
-		<td><code>clear()<code></td><td>Removes all mappings in the <code>HashMap</code>.</td>
+		<td><code>clear()</code></td><td>Removes all mappings in the <code>HashMap</code>.</td>
 	</tr>
 	<tr>
 		<td><code>remove(key)</code></td><td>Removes the mapping for the given <code>key</code> and returns its value.</td>
@@ -67,6 +74,14 @@ const myMap2 = new HashMap(myMap); // create HashMap from other HashMap
 
 [HashSet.js](src/HashSet.js) implements an unordered collection with unique elements. Similar to <code>HashMap</code>, each element (except primitives) stored in a <code>HashSet</code> must implement a <code>hashCode</code> and <code>equals</code> method. To use <code>HashSet</code>, <code>HashMap</code> must be included first. <br>
 Note that <code>HashSet</code> instances are iterable, so <code>[...myHashSet]</code> will return an array containing the elements in the <code>HashSet</code>.
+
+### Usage
+Include HashMap.js and HashSet.js before code that uses <code>HashSet</code>. The scripts can be loaded via CDN or local downloaded copies.
+
+```
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashMap.js" integrity="sha384-AD+fe06BloScT8iK5vgKw2FW3imLYjVLP6P9OS+zKpI8vIaNrBTKnQ4TCa4poj2F" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashSet.js" integrity="sha384-eEGZyLlAVNsmA+/PWbSLgZR1wO9z2AWkHyVtLzr1vCenlCZ2wb9wLxNKY7Ib5lK5" crossorigin="anonymous"></script>
+```
 
 ### Constructor
 The constructor accepts an optional iterable object, all elements of which will be initially added to the <code>HashSet</code>. If the first parameter is not provided, it constructs an empty <code>HashSet</code>.
@@ -109,6 +124,13 @@ const mySet2 = new HashSet([1, 2, 3]); // creates a HashSet containing the eleme
 
 [ArrayList.js](src/ArrayList.js) implements an dynamically-sized list with a <code>hashCode</code> and <code>equals</code> method. <br>
 Note that <code>ArrayList</code> instances are iterable, so <code>[...myArrayList]</code> will return an array containing the elements in the <code>ArrayList</code> (in order).
+
+### Usage
+Include the script before code that uses <code>ArrayList</code>. The script can be loaded via CDN or a local downloaded copy.
+
+```
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/ArrayList.js" integrity="sha384-Uz+oGp/Q3Lfeq6ESB4bvbOAHw0hF1RjSBPHQqjpikrVrFjF6SDx6JMV9rI3mBBFr" crossorigin="anonymous"></script>
+```
 
 ### Constructor
 The constructor accepts an optional iterable object to use to fill the list initially. If not specified, an empty <code>ArrayList</code> is constructed.
@@ -174,6 +196,13 @@ const myList2 = new ArrayList([1, 2, 3]); // creates an ArrayList containing the
 
 [HashedObject.js](src/HashedObject.js) provides a wrapper for an object that allows specifying an <code>equals</code> and <code>hashCode</code> function. This wrapped object can then be used as a key in a <code>HashMap</code> or stored 
 in a <code>HashSet</code>.<br>
+
+### Usage
+Include the script before code that uses <code>HashedObject</code>. The script can be loaded via CDN or a local downloaded copy.
+
+```
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashedObject.js" integrity="sha384-RBqyEB5bCB2ci4e3ZKiBp4W87K7LYay1qXMFO/9cUq7TndRlQKLSZ4/iFN1bMbRl" crossorigin="anonymous"></script>
+```
 
 ### Constructor
 The constructor takes the object to wrap, the hash function, and the equals function as arguments. <br>
