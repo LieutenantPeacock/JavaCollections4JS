@@ -13,7 +13,7 @@ An example of usage can be found [here](examples/HashMapExample.html).
 ### Usage
 Include the script before code that uses <code>HashMap</code>. The script can be loaded via CDN or a local downloaded copy.
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashMap.js" integrity="sha384-AD+fe06BloScT8iK5vgKw2FW3imLYjVLP6P9OS+zKpI8vIaNrBTKnQ4TCa4poj2F" crossorigin="anonymous"></script>
 ```
 
@@ -21,7 +21,7 @@ Include the script before code that uses <code>HashMap</code>. The script can be
 
 The constructor accepts an optional <code>HashMap</code>, which will copy the contents. Alternately, it will create an empty <code>HashMap</code>.
 
-```
+```js
 const myMap = new HashMap(); // create empty HashMap
 const myMap2 = new HashMap(myMap); // create HashMap from other HashMap
 ```
@@ -80,7 +80,7 @@ Note that <code>HashSet</code> instances are iterable, so <code>[...myHashSet]</
 ### Usage
 Include HashMap.js and HashSet.js before code that uses <code>HashSet</code>. The scripts can be loaded via CDN or local downloaded copies.
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashMap.js" integrity="sha384-AD+fe06BloScT8iK5vgKw2FW3imLYjVLP6P9OS+zKpI8vIaNrBTKnQ4TCa4poj2F" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashSet.js" integrity="sha384-eEGZyLlAVNsmA+/PWbSLgZR1wO9z2AWkHyVtLzr1vCenlCZ2wb9wLxNKY7Ib5lK5" crossorigin="anonymous"></script>
 ```
@@ -88,7 +88,7 @@ Include HashMap.js and HashSet.js before code that uses <code>HashSet</code>. Th
 ### Constructor
 The constructor accepts an optional iterable object, all elements of which will be initially added to the <code>HashSet</code>. If the first parameter is not provided, it constructs an empty <code>HashSet</code>.
 
-```
+```js
 const mySet = new HashSet(); // creates empty HashSet
 const mySet2 = new HashSet([1, 2, 3]); // creates a HashSet containing the elements of the array
 ```
@@ -130,14 +130,14 @@ Note that <code>ArrayList</code> instances are iterable, so <code>[...myArrayLis
 ### Usage
 Include the script before code that uses <code>ArrayList</code>. The script can be loaded via CDN or a local downloaded copy.
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/ArrayList.js" integrity="sha384-Uz+oGp/Q3Lfeq6ESB4bvbOAHw0hF1RjSBPHQqjpikrVrFjF6SDx6JMV9rI3mBBFr" crossorigin="anonymous"></script>
 ```
 
 ### Constructor
 The constructor accepts an optional iterable object to use to fill the list initially. If not specified, an empty <code>ArrayList</code> is constructed.
 
-```
+```js
 const myList = new ArrayList(); // creates an empty ArrayList
 const myList2 = new ArrayList([1, 2, 3]); // creates an ArrayList containing the numbers 1, 2, 3
 ```
@@ -202,7 +202,7 @@ in a <code>HashSet</code>.<br>
 ### Usage
 Include the script before code that uses <code>HashedObject</code>. The script can be loaded via CDN or a local downloaded copy.
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashedObject.js" integrity="sha384-RBqyEB5bCB2ci4e3ZKiBp4W87K7LYay1qXMFO/9cUq7TndRlQKLSZ4/iFN1bMbRl" crossorigin="anonymous"></script>
 ```
 
@@ -211,7 +211,7 @@ The constructor takes the object to wrap, the hash function, and the equals func
 The <code>equals</code> function must take two objects as parameters and return a boolean indicating whether they are equal. If not equals function is specified, the default is strict equality comparison.<br>
 The <code>hashCode</code> function must take one object as input and return its hash code.
 
-```
+```js
 let wrapped = new HashedObject(myObj, hashFn, equalsFn);
 ```
 
