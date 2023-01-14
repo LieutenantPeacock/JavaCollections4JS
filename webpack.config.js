@@ -1,5 +1,8 @@
 const path = require('path');
 const glob = require('glob');
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
+const fs = require('fs');
 
 const defaultLibOpts = {
   type: 'umd',
@@ -29,5 +32,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     globalObject: 'this',
-  }
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({extractComments: false})]
+  },
+  plugins: [new webpack.BannerPlugin(fs.readFileSync('./LICENSE.txt', 'utf-8')),]
 };
