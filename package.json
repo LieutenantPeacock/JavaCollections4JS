@@ -1,6 +1,6 @@
 {
   "name": "java-collections4js",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Implementations of some commonly-used Java collections in JavaScript.",
   "main": "dist/index.js",
   "files": ["dist"],
