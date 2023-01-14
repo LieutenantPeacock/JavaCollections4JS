@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	The equals function must take two objects as parameters and return a boolean indicating whether they are equal.
 	The hashCode function must take one object as input and return its hash code.
 */
-class HashedObject {
+export default class HashedObject {
 	#value
 	#equalsFn
 	#hashCode
