@@ -1,0 +1,31 @@
+{
+  "name": "java-collections4js",
+  "version": "1.4.0",
+  "description": "Implementations of some commonly-used Java collections in JavaScript.",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LieutenantPeacock/JavaCollections4JS.git"
+  },
+  "keywords": [
+    "Java",
+    "collections",
+    "Map",
+    "HashMap",
+    "Set",
+    "HashSet",
+    "List",
+    "ArrayList"
+  ],
+  "author": "LieutenantPeacock",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^8.0.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
