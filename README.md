@@ -1,5 +1,8 @@
 # Java Collections For JavaScript
 
+[![NPM Version](https://img.shields.io/npm/v/java-collections4js.svg?style=flat-square)](https://www.npmjs.com/package/java-collections4js)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE.txt)
+
 This repository contains implementations of some commonly-used Java collections in JavaScript.
 
 ## HashMap
@@ -14,7 +17,7 @@ An example of usage can be found [here](examples/HashMapExample.html).
 Include the script before code that uses <code>HashMap</code>. The script can be loaded via CDN or a local downloaded copy.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/java-collections4js@1.4.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/java-collections4js@1.4.2"></script>
 <!-- old version -->
 <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/JavaCollections4JS@1.3.0/src/HashMap.js" integrity="sha384-AD+fe06BloScT8iK5vgKw2FW3imLYjVLP6P9OS+zKpI8vIaNrBTKnQ4TCa4poj2F" crossorigin="anonymous"></script>
 ```
@@ -22,10 +25,10 @@ Include the script before code that uses <code>HashMap</code>. The script can be
 Or for Node.js, run `npm i java-collections4js` to install the package, then use it like so:
 
 ```js
-const { HashMap, HashSet } = require("java-collections4js");
+const { HashMap } = require("java-collections4js");
 
 // or with ECMAScript Module imports
-import JavaCollections from "java-collections4js";
+import JavaCollections from "java-collections4js"; // use JavaCollections.HashMap
 import HashMap from "java-collections4js/dist/HashMap.js";
 ```
 
